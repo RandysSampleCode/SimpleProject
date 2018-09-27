@@ -1,14 +1,15 @@
-plugins {
-    id 'java-library'
-}
+group = 'edu.learning'
+version = 1.00
+
+apply plugin: "java"
 
 dependencies {
-    api 'org.apache.commons:commons-math3:3.6.1'
-
-    implementation 'com.google.guava:guava:23.0'
-
+    compile 'org.apache.commons:commons-math3:3.6.1'
+    compile 'com.google.guava:guava:23.0'
     testImplementation 'junit:junit:4.12'
 }
+// ./gradlew properties | grep group | awk {'print $2'}
+// ./gradlew properties | grep name | awk {'print $2'}
 
 repositories {
     jcenter()
